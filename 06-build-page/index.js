@@ -118,8 +118,8 @@ function streamMergeRecursive(files = [], fileWriteStream) {
 /////////////////////////////////////////
 
 function copyDirRecursive(sourceDir, destDir) {
-  fs.mkdir(destDir, { recursive: false }, (err) => {
-    if (err) console.log(err);
+  fs.mkdir(destDir, { recursive: false }, (/* err */) => {
+    // if (err) console.log(err);
     fs.readdir(path.join(sourceDir), { withFileTypes: true }, (err, files) => {
       if (err) console.log(err);
       else {
